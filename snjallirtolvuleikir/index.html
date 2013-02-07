@@ -14,20 +14,34 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="reveal.js/css/reveal.min.css">
-    <link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/night.css" id="theme">
 
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
 
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
-      document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+      document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
     </script>
 
     <!--[if lt IE 9]>
-    <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <script src="../reveal.js/lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <style>
+      .mobiles .state-background {
+        background: url(images/mobiles.jpg) 50% 50% / contain no-repeat;
+      }
+
+      .browsers .state-background {
+        background: url(images/useopenstandards.jpg) 50% 50% / contain no-repeat;
+      }
+
+      .future .state-background {
+        background: url(images/html5-future-web-language.jpg) 50% 50% / contain no-repeat;
+      }
+    </style>
   </head>
 
   <body>
@@ -42,6 +56,36 @@
           <p>
             <small><a href="http://twitter.com/eirikurn">@eirikurn</a><br><a href="http://twitter.com/thorsteinsson">@thorsteinsson</a></small>
           </p>
+        </section>
+
+        <section data-state="future">
+        </section>
+
+        <section>
+          <img src="images/sunspider.jpg" alt="Crazy html5 rabbit" />
+        </section>
+
+        <section>
+          <img src="images/crazy-html5-rabbit.jpg" alt="Sunspider tests" />
+        </section>
+
+        <section data-state="mobiles">
+        </section>
+
+        <section>
+          <img src="images/iwebkit.png" alt="iWebkit" style="background: none; border: none;" />
+        </section>
+
+        <section data-state="browsers">
+        </section>
+
+        <section>
+          <img src="images/zuckerberg.jpg" alt="Mark Zuckerberg" />
+          <blockquote>The biggest mistake we've made as a company is betting too much on HTML5 as opposed to native.</blockquote>
+        </section>
+
+        <section>
+          <iframe src="http://player.vimeo.com/video/55486684" width="1280" height="720" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/55486684">Sencha Fastbook</a> from <a href="http://vimeo.com/sencha">Sencha</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
         </section>
 
         <section>
@@ -127,8 +171,8 @@
 
     </div>
 
-    <script src="reveal.js/lib/js/head.min.js"></script>
-    <script src="reveal.js/js/reveal.min.js"></script>
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.min.js"></script>
 
     <script>
 
@@ -145,13 +189,13 @@
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-          // { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: '../reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
 
