@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>CSS Components</title>
+
+    <meta name="description" content="A lightning talk about CSS Components">
+    <meta name="author" content="Aegir Giraldo Thorsteinsson">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/night.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+      .reveal .state-background {
+        -webkit-transition: none;
+      }
+
+      /*********************************************
+       * OTHER STATES
+       *********************************************/
+
+      .fullscreen .state-background {
+        width: 100%;
+        height: 100%;
+      }
+
+      .fullscreen .reveal .slides {
+        margin: 0px;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100%;
+        left: 0px;
+        right: 0px;
+        top:0px;
+        bottom: 0px;
+      }
+
+      .fullscreen .reveal .slides > section {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        text-align: left;
+        left: 0px;
+        right: 0px;
+        top: 0px !important;
+        bottom: 0px;
+        margin:0px;
+        padding:20px;
+        padding-top: 40px;
+      }
+
+      .noborder {
+        border: none !important;
+        box-shadow: none !important;
+        background: none;
+      }
+
+      /* Pretty print */
+      .reveal .prettyprint {
+        background: #fff;
+        padding: .5em;
+      }
+
+      .prettyprint .str, /* string content */
+      .prettyprint .atv { /* a markup attribute value */
+        color: rgb(0, 138, 53); 
+      }  
+      .prettyprint .kwd, /* a keyword */
+      .prettyprint .tag { /* a markup tag name */
+        color: rgb(0, 102, 204);
+      }
+      .prettyprint .com { /* a comment */
+        color: rgb(127, 127, 127); 
+        font-style: italic; 
+      }  
+      .prettyprint .lit { /* a literal value */
+        color: rgb(127, 0, 0);
+      }  
+      .prettyprint .pun, /* punctuation, lisp open bracket, lisp close bracket */
+      .prettyprint .opn, 
+      .prettyprint .clo { 
+        color: rgb(127, 127, 127); 
+      }
+      .prettyprint .typ, /* a type name */
+      .prettyprint .atn, /* a markup attribute name */ 
+      .prettyprint .dec, 
+      .prettyprint .var { /* a declaration; a variable name */
+        color: rgb(127, 0, 127);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>CSS Components</h1>
+          <p>
+            <small><a href="http://twitter.com/thorsteinsson">@thorsteinsson</a></small>
+          </p>
+        </section>
+
+        <section>
+          <img src="images/yammer-1.png">
+        </section>
+
+        <section>
+          <img src="images/yammer-2.png">
+        </section>
+
+        <section>
+          <h1>Past projects</h1>
+        </section>
+
+        <section>
+          <h2>Fighting specificity</h2>
+        </section>
+
+        <section>
+          <h2>!important</h2>
+        </section>
+
+        <section>
+          <h2>#IDs</h2>
+        </section>
+
+        <section>
+          <h2>Readability</h2>
+        </section>
+
+        <section>
+          <h2>CSS &hearts; HTML</h2>
+        </section>
+
+        <section>
+          <h1>Solutions</h1>
+        </section>
+
+        <section>
+          <h2>BEM</h2>
+        </section>
+        
+        <section>
+          <h2>Block - Element - Modifier</h2>
+        </section>
+
+        <section>
+          <img src="images/bem.png">
+        </section>
+
+        <section>
+          <pre><code>
+  &lt;ul class="menu">
+    &lt;li class="menu__item">Index&lt;/li>
+    &lt;li class="menu__item menu__item_state_current">Products&lt;/li>
+    &lt;li class="menu__item">Contact&lt;/li>
+  &lt;/ul>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Naming conventions</h2>
+          <pre><code>
+  &lt;div class="main-menu__item main-menu__item_state_current">
+  &lt;div class="main-menu--item main-menu--item__current">
+  &lt;div class="MainMenu-Item Menu-Item_Current">
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>SUIT</h2>
+          <h3>Nicolas Gallagher</h3>
+        </section>
+
+        <section>
+          <h2>SUIT naming</h2>
+          <pre><code>
+  [&lt;namespace>-]&lt;ComponentName>[--modifierName|-descendantName]
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code>
+  /* Core button */
+  .Button { /* … */ }
+  /* Default button theme */
+  .Button--default { /* … */ }
+
+  .Tweet { /* … */ }
+  .Tweet.is-expanded { /* … */ }
+
+  .u-block { display: block; }
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code>
+  &lt;article class="Tweet with-Dropdown">
+    [other content]
+    &lt;div class="Dropdown is-closed">
+        ...
+    &lt;/div>
+  &lt;/article>
+          </code></pre>
+          <pre><code>
+  /* The host element of a Dropdown always needs these styles */
+  .with-Dropdown { position: relative; }
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Standalone components</h2>
+        </section>
+
+        <section>
+          <h2>HTML -> CSS</h2>
+        </section>
+
+        <section>
+          <h2>Object Oriented CSS</h2>
+          <h3>Nicole Sullivan</h3>
+        </section>
+
+        <section>
+          <h2>SMACSS</h2>
+          <h3>Jonathan Snook</h3>
+        </section>
+
+        <section>
+          <h2>Component website</h2>
+        </section>
+
+        <section>
+          <h2>Preprocessors</h2>
+        </section>
+
+        <section>
+          <h2>Thanks!</h2>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+        width: 1280,
+        height: 800,
+
+        theme: "sky", // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: '../reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
