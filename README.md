@@ -1,8 +1,8 @@
 Our presentations
 =============
 
-[http://aranja.github.io/presentations/csscomponents]
-[http://aranja.github.io/presentations/mobileweb]
-[http://aranja.github.io/presentations/snjallirtolvuleikir]
-[http://aranja.github.io/presentations/webgl]
+- http://aranja.github.io/presentations/csscomponents
+- http://aranja.github.io/presentations/mobileweb
+- http://aranja.github.io/presentations/snjallirtolvuleikir
+- http://aranja.github.io/presentations/webgl
  
