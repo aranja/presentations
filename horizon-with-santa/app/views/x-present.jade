@@ -1,0 +1,44 @@
+template
+  style.
+    :host {
+      display: inline-block;
+    }
+
+    #wrapper {
+      display: inline-block;
+      position: relative;
+    }
+
+    #label {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+      left: 30%;
+      padding: 10px;
+      position: absolute;
+      top: 60%;
+    }
+
+    span {
+      color: orange;
+    }
+
+  #wrapper
+    img(src="img/present.png")
+
+    #label
+      span To:
+      content
+
+script: :babel
+  let importDoc = document.currentScript.ownerDocument;
+
+  class SantaComponent extends HTMLElement {
+    createdCallback() {
+      let t = importDoc.querySelector('template');
+      let clone = document.importNode(t.content, true);
+      this.createShadowRoot().appendChild(clone);
+    }
+  }
+
+  document.registerElement('x-present', SantaComponent);

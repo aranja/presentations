@@ -1,0 +1,56 @@
+{
+  "name": "gulp-base",
+  "version": "0.0.4",
+  "description": "A base for projects using Gulp",
+  "browserify": {
+    "transform": [
+      "babelify",
+      "browserify-shim"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aranja/gulp-base.git"
+  },
+  "author": {
+    "name": "Aranja",
+    "email": "aranja@aranja.com",
+    "url": "http://aranja.com"
+  },
+  "bugs": {
+    "url": "https://github.com/aranja/gulp-base/issues"
+  },
+  "homepage": "https://github.com/aranja/gulp-base",
+  "license": "MIT",
+  "devDependencies": {
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "browserify-shim": "^3.8.2",
+    "glob": "^5.0.1",
+    "gulp": "^3",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-changed": "^1.1.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-csso": "^1.0.0",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-jade": "^1.0.0",
+    "gulp-less": "^3.0.1",
+    "gulp-notify": "^2.1.0",
+    "gulp-open": "^0.3.1",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-util": "^3.0.2",
+    "gulp-watch": "^4.1.1",
+    "jade": "^1.9.2",
+    "jade-babel": "^4.0.0",
+    "less": "^2.4.0",
+    "rimraf": "^2.2.8",
+    "run-sequence": "^1.0.2",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "domready": "^1.0.7",
+    "normalize.css": "^3.0.2",
+    "webcomponents.js": "^0.5.5-1"
+  }
+}
